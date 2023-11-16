@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div class="container">
+        <h1 id="title" class=heading"">This is heading</h1>
+        <p class="para" id="paragraph">Lorem ipsum dolor sit amet.</p>
+    </div>
+    <script>
+        document.getElementById('title').id
+       //=> 'title'
+         document.getElementById('title').class
+       //=> undefined
+         document.getElementById('title').class
+       //=> undefined
+         document.getElementById('title').className
+       //=> 'heading""'
+         document.getElementById('title').getAttribute()
+        //=>VM2581:1 Uncaught TypeError: Failed to execute 'getAttribute' on 'Element': 1 argument required, but only 0 present.
+         //   at <anonymous>:1:35
+       // (anonymous) @ VM2581:1
+         document.getElementById('title').getAttribute
+        //=>ƒ getAttribute() { [native code] }
+         document.getElementById('title').getAttribute('id')
+        //=>'title'
+         document.getElementById('title').setAttribute('id','heading')
+       // undefined,but id is changed to heading in server
+    </script>
+</body>
+</html>

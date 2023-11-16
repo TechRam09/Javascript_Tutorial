@@ -1,0 +1,28 @@
+<!-- DOM  - Document Object Module -->
+<!-- it is a process of manipulating the html document using javascript using document. properties -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="heading1" class="heading">This is heading</h1>
+      <p id="para">Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+
+   <script>
+        //Selecting the tag by ID
+       const heading =   document.getElementById('heading1')
+      //changing the text of the tag
+        heading1.innerHTML = "This is Shreeram's Page"
+        
+        //Selecting the paragraph tag by ID to set Styling
+        const paragraph = document.getElementById('para')
+        paragraph.style.backgroundColor="green"
+        paragraph.style.color="white"
+    </script>
+  </body>
+</html>

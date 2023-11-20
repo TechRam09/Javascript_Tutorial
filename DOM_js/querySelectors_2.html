@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1 id="title" class="heading">This is heading1</h1>
+        <h1 id="title2" class="heading">This is heading2</h1>
+        <p class="para" id="paragraph">Lorem ipsum dolor sit amet. </p>
+        
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+        </ul>
+    </div>
+    <script>
+        const MyList = document.querySelector('ul')//returns whole list
+       // undefined
+       // MyList
+       //=> <ul>​<li class=​"list-item">​…​</li>​<li class=​"list-item">​…​</li>​<li class=​"list-item">​…​</li>​</ul>​
+
+        const items = MyList.querySelector('li')//selects only the first list item
+       //=> undefined
+
+       // items
+       //=> <li class=​"list-item">​::marker​"one"</li>​
+        
+        items.style.color="green"//1st item color change to green
+        //=>'green'
+        items.style.backgroundColor ="orange"//1st item bgcolor change to orange
+        //=>'orange'
+        items.style.padding="10px"//1st item padding is said to 10px
+        //=>'10px'
+    </script>
+</body>
+</html>

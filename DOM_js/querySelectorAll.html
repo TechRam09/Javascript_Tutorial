@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NODELIST</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title" class="heading">This is heading1</h1>
+        <h1 id="title2" class="heading">This is heading2</h1>
+        <p class="para" id="paragraph">Lorem ipsum dolor sit amet. </p>
+        
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+        </ul>
+        <script>
+            //to slect multiple elements use querySelectorsAll('tag')
+            const myList = document.querySelectorAll('ul')//it returns nodeList of Elemnts
+           //=> undefined
+            console.log(myList)
+            //=>NodeList [ul]//it is  similar to array but not complete array
+            document.querySelectorAll('li')
+            //=>NodeList(3) [li.list-item, li.list-item, li.list-item]
+            const items = document.querySelectorAll('li')
+           //=> undefined
+            consoloe.log(items)
+           //=> NodeList(3) [li.list-item, li.list-item, li.list-item]
+           
+           //we can apply forEach loop just like array
+            items.forEach((items)=>{
+             items.style.color ="red"
+            })
+            //=>undefined
+            //To apply properties for mention the item index 
+            items[0].style.color ="blue"
+            //'blue'
+            
+        </script>
+    </div> 
+</body>
+</html>

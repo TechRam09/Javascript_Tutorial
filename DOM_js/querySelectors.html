@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title" class="heading">This is heading1</h1>
+        <h1 id="title2" class="heading">This is heading2</h1>
+        <p class="para" id="paragraph">Lorem ipsum dolor sit amet. </p>
+        <input id="input1" type="text" placeholder="enter text">
+        <input id="input2" type="password" placeholder="enter password ">
+    </div>
+    <script>
+    document.querySelector('h1')//it selects the first h1 tag
+    //=><h1 id=​"title" class=​"heading">​This is heading1​</h1>​
+    document.querySelector('#title2')//incase id ,id should be passed with '#id'
+    //=><h1 id=​"title2" class=​"heading">​This is heading2​</h1>​
+    document.querySelector('.heading')//incase className ,className should be passed with '.className',it selects the first tag with given class
+   //=> <h1 id=​"title" class=​"heading">​This is heading1​</h1>​
+
+    document.querySelector('input')//select the tag by tag,it selects the firwst tag 
+    //=><input id=​"input1" type=​"text" placeholder=​"enter text">​
+    document.querySelector('input[type="password"')//selects the input.tag by attribute
+    //=><input id=​"input2" type=​"password" placeholder=​"enter password">
+    document.querySelector('div:first-child')//To select the first,second nodes
+    /*
+    <div class=​"container">
+        ​<h1 id=​"title" class=​"heading">​This is heading1​</h1>​
+        <h1 id=​"title2" class=​"heading">​This is heading2​</h1>
+        ​<p class=​"para" id=​"paragraph">​Lorem ipsum dolor sit amet. ​</p>
+        ​<input id=​"input1" type=​"text" placeholder=​"enter text">​
+        <input id=​"input2" type=​"password" placeholder=​"enter password ">
+    ​</div>​
+    */
+
+    </script>
+</body>
+</html>

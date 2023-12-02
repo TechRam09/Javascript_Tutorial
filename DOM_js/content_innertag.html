@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title" class=heading"">This is heading<span style="display: none;">I'm invisible</span></h1>
+        <p class="para" id="paragraph">Lorem ipsum dolor sit amet. </p>
+    </div>
+    <script>
+        const title = document.getElementById('title')
+    undefined
+    title.textContent
+   //'This is heading'
+    title.innerHTML
+    //'This is heading'
+    title.innerText
+    //'This is heading'
+
+    //difference between textContent,innerText and innerHTML
+    //after adding span tag to the h1 tag
+  
+    //title
+    //=><h1 id=​"title" class=​"heading&quot;&quot;">​"This is heading"<span style=​"display:​ none;​">​I'm invisible​</span>​</h1>​
+
+    title.innerText//it doesnt  returns the span content along with h1
+    //=>'This is heading'
+
+    title.textContent//it also returns the span content along with h1
+    //=>"This is headingI'm invisible"
+
+    title.innerHTML//=>it supports the changing of tags along with text
+    //=>`This is heading<span style="display: none;">I'm invisible</span>`
+    </script>
+</body>
+</html>

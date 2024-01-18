@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="languages">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    const language =(newLang)=>{
+        const li = document.createElement('li')
+        console.log(li)
+        li.innerHTML = `${newLang}`
+
+        document.querySelector('.languages').appendChild(li)
+    }
+
+    language("python")
+    language("C++")
+    
+    const optimised = (newLang)=>{
+        const li = document.createElement('li')
+        console.log(li)
+        li.append(document.createTextNode(newLang))
+        document.querySelector('.languages').appendChild(li)
+    }
+
+    optimised("C")
+    optimised("Ruby")
+
+    //edit
+    const firstnode =document.querySelector('li:first-child')
+   // firstnode.innerHTML = "Mojo"
+   firstnode.outerHTML = "<li>Mojo</li>"
+   //using replace method
+   const secondNode = document.querySelector("li:nth-child(2)")
+   const newNode = document.createElement('li')
+   newNode.append(document.createTextNode("TypeScript"))
+   secondNode.replaceWith(newNode)
+</script>
+</html>

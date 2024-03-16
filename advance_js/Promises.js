@@ -38,3 +38,29 @@ promiseThree.then((user)=>{
 })
 
 
+//error handling in promise //if and if not data came
+
+let promiseFour = new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+   let error = false;//toggle to see output
+   if(!error){   // !error- no error  (to check there is no error)
+     resolve({username:'rahul',password:'123'})
+   }else{
+     reject("Something Went Wrong!!!....")
+   }
+  },4000)
+})
+
+promiseFour.then((user)=>{ 
+ return user.username
+})
+.then
+((username)=> console.log(username))
+.catch((error)=>{
+ console.log(error);
+})
+.finally(()=>{
+ console.log("It can either be resolve or rejected but done")//after execution this line will be printed for sure
+})
+
+

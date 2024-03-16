@@ -25,4 +25,16 @@ console.log("Promise resolved");
 })
 
 
+//promise3 passing of value from resolve to promise consume(.then)
+
+let promiseThree = new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+   resolve({username:'Shree',age:20}) ;//value comes from database or network will in the form of oblject
+  },3000)
+})
+
+promiseThree.then((user)=>{
+ console.log(user);
+})
+
 

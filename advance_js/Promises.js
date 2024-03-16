@@ -68,4 +68,26 @@ promiseFour.then((user)=>{
 
 // another method of res
 
+//promise fith using async and await
 
+let promiseFifth = new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+   let error = true;//toggle to see output
+   if(!error){   // !error- no error  (to check there is no error)
+     resolve({username:'rahul',password:'123'})
+   }else{
+     reject("JS Went Wrong!!!....")
+   }
+  },4000)
+})
+
+async function promiseFifthfunction(){
+  try {
+    const response = await promiseFifth
+    console.log(response);
+  } catch (error) {
+    console.log(error)
+  }
+}
+//since we have use reject to handle in async we have to use try and catch
+promiseFifthfunction();

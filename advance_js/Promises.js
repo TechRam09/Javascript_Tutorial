@@ -63,4 +63,9 @@ promiseFour.then((user)=>{
  console.log("It can either be resolve or rejected but done")//after execution this line will be printed for sure
 })
 
+//noe error is true so output is "Something Went Wrong!!...."
+//now toggle if there no error
+
+// another method of res
+
 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>CODE WITH JS</h2>
+    <button id="start">Start</button>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    /*Syntax:
+    setInterval(callbackfunction(),timeinterval)
+    1min = 1000ns
+    */
+
+   const stop= setInterval(()=>{
+        console.log(Date.now())
+    },2000)
+
+   // clearInterval(stop)//=>used to prevent the execution  os setInterval Funtion
+    const Start = ()=>{
+        console.log(Date.now())
+    }
+
+    let intervalID
+   document.getElementById('start').addEventListener('click',()=>{
+     intervalID = setInterval(Start,2000)
+   })
+
+   document.getElementById('stop').addEventListener('click',()=>{
+    clearInterval(intervalID)
+    console.log("Stopped")
+   })
+</script>
+</html>

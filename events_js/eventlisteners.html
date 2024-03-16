@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #animals{
+            display:flex;
+        }
+        .animals{
+            background-color: aqua;
+            color:black;
+            height:100px;
+            width:100px;
+            margin:1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="animals">
+        <div id="man" class="animals" onclick="Pressed()">MAN</div>
+    <div  id="Tiger" class="animals">Tiger</div>
+    <div  id="Lion" class="animals">Lion</div>
+    <div  id="Cow" class="animals">Cow</div>
+    <div  id="Cat" class="animals">CAt</div>
+    </div>
+    
+</body>
+<script>
+    //first way using onclick function in tag
+        const Pressed = ()=>{
+            alert("Man is Pressed")
+        }
+
+    document.getElementById('Lion').onclick = function(){
+        alert("Lion id Pressed")
+    }
+    //event listeners
+    document.getElementById('Tiger').addEventListener('click',()=>{
+        alert("Tiger is pressed")
+    },false)
+
+    document.getElementById('Tiger').addEventListener('click',(e)=>{
+        console.log(e)
+    },false)
+
+    //third method attachEvent  -internet explorer
+    //in jquery - on is used
+
+    //it ised for defualt preventer
+    //type,timestamp,default preventr,source element,client nposition,screen size position related,key pressed events
+
+    //event propagation
+    //bubbling means using false 
+    document.getElementById('animals').addEventListener('click',(e)=>{
+        alert("no animal is pressed")
+    },false)//on press tiger this will be executed second
+    document.getElementById('Tiger').addEventListener('click',(e)=>{
+        alert("Tiger is pressed")
+    },false)//on press tiger it will be executed first
+
+    //capturing means using tru
+    document.getElementById('animals').addEventListener('click',(e)=>{
+        alert("no animal is pressed")
+    },true)//on press tiger it will be executed first
+    document.getElementById('').addEventListener('click',(e)=>{
+        alert("Tiger is pressed")
+    },true) //on press tiger this will be executed second
+
+</script>
+</html>

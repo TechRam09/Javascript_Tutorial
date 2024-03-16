@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>CODE WITH JS</h2>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    //it executes only one time after certain sec
+    /*Syntax:
+    setTimeout(callbackfunction(),timeinterval)
+    1min = 1000ns
+    */
+    setTimeout(function(){
+        console.log("Shreeram")
+    },2000)//after 2sec it log Shreeram
+
+    //second type by passing function reference 
+
+   const myName = ()=>{
+        console.log("Shreeram")
+    }
+    setTimeout(myName,2000)//after 2sec it log Shreeram
+
+    //changing the text after some sec
+    const changeText = ()=>{
+        document.querySelector('h2').innerHTML = "Chai With Shreeram"
+        console.log("Changed")
+    }
+  const textChange =  setTimeout(changeText,3000)
+
+    //clearTimeout(textChange)//it terminates the execution of setTimeout function
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearTimeout(textChange)
+        console.log('Stopped')
+    },false)
+
+</script>
+</html>

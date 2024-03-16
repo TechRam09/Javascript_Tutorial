@@ -13,3 +13,16 @@ promiseOne.then(function(){
 })
 
 
+//promise 2
+
+new Promise(function(resolve,reject){
+  setTimeout(()=>{
+    console.log("Async 2 task")
+    resolve()
+  },2000)
+}).then(()=>{
+console.log("Promise resolved");
+})
+
+
+

@@ -24,7 +24,6 @@ new Promise(function(resolve,reject){
 console.log("Promise resolved");
 })
 
-
 //promise3 passing of value from resolve to promise consume(.then)
 
 let promiseThree = new Promise((resolve,reject)=>{
@@ -91,3 +90,28 @@ async function promiseFifthfunction(){
 }
 //since we have use reject to handle in async we have to use try and catch
 promiseFifthfunction();
+
+//fetch and use data using async type promise
+
+async function getuser(){
+   try {
+    let response = await fetch('https://api.github.com/users/TechRam09')  //this takes time so await is used
+   let data = await response.json()  // this also take time so await is used
+   console.log(data);
+   } catch (error) {
+    console.log(error);
+   }
+}
+
+getuser()
+
+
+// same using .then.catch 
+let user = fetch('https://api.github.com/users/TechRam09')
+user.then((response)=>{
+   return response.json()
+}).then((data)=>{
+  console.log(data.login);
+}).catch((error)=>{
+   console.log(error);
+})
